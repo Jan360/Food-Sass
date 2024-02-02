@@ -1,0 +1,45 @@
+.about
+  margin-top: 5rem
+
+  .row
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 3rem
+    align-items: center
+
+    .col h2
+      font-size: 5.8rem
+      margin-bottom: 2rem
+
+    .col p
+      margin-bottom: 3rem
+      font-size: 1.8rem
+
+    .col img
+      width: 100%
+
+@media (max-width: 1200px)
+  .about .row .col h2
+    font-size: 4rem
+
+@media (max-width: 800px)
+  .about .row
+    grid-template-columns: 1fr
+
+    .col:first-child
+      text-align: center
+      grid-row-start: 2
+
+    .col img
+      max-width: 40rem
+      transform: translateX(-5%)
+
+@media (max-width: 567px)
+  .about
+    margin-top: 20rem
+
+    .row .col h2
+      font-size: 3.5rem
+
+    .row .col p
+      font-size: inherit

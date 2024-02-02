@@ -1,0 +1,214 @@
+.header
+  background-color: $light-yellow
+  height: calc(100vh - 8rem)
+  margin: 4rem
+  border-radius: 2rem
+  padding: 2rem
+
+  .row
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .navbar, .right
+    display: flex
+    align-items: center
+
+  .logo
+    height: 3.8rem
+
+  .navbar a
+    display: inline-block
+    padding: 1rem
+    font-weight: 500
+    transition: all 0.5s ease-in-out
+    position: relative
+
+    &:not(:last-child)
+      margin-right: 1rem
+
+    &::after
+      content: ""
+      position: absolute
+      bottom: 1%
+      left: 0
+      margin-left: 1rem
+      background-color: $blue-black
+      width: 50%
+      height: 3px
+      visibility: hidden
+      opacity: 0
+
+    &:hover::after
+      visibility: visible
+      opacity: 1
+
+  .right img
+    height: 2.5rem
+    cursor: pointer
+    margin-right: 2rem
+
+.btn
+  display: inline-block
+  background-color: $blue-black
+  color: $white
+  border-radius: 5rem
+  padding: 1rem 2rem
+  outline: 4px solid $yellow
+  font-weight: 500
+  box-shadow: $box-shadow
+  transition: $transition
+
+.btn:hover
+  transform: translateY(-3px)
+
+.header .nav-btn
+  padding: 0.7rem 2rem
+  border: none
+  margin-left: 3rem
+  outline: 4px solid transparent
+
+.header .nav-btn:hover
+  outline: 4px solid $yellow
+
+.hamburger
+  display: none
+
+  img
+    height: 2.5rem
+    cursor: pointer
+
+@media (max-width: 800px)
+  .navbar
+    position: fixed
+    /* top: 12rem */
+    left: 0
+    right: 0
+    background-color: $white
+    width: 90%
+    margin: 0 auto
+    padding: 1rem
+    border-radius: 0.5rem
+    box-shadow: $box-shadow
+    flex-direction: column
+    top: -100%
+    transition: 0.5s
+    z-index: 1000
+
+    a::after
+      display: none
+
+    a:hover
+      color: $yellow
+
+  .header .right img:nth-child(3),
+  .header .right a
+    display: none
+
+  .header .right img
+    margin: 0
+
+  .header .right img:first-child
+    margin-right: 2rem
+
+  .hamburger
+    display: block
+
+  .navbar.show
+    top: 12rem
+
+@media (max-width: 567px)
+  .header
+    margin: 0
+
+  .navbar.show
+    top: 8rem
+
+/* ========== Hero Area ============ */
+.header .home
+  height: calc(100% - 12.5rem)
+
+  .row
+    height: 100%
+    display: grid
+    grid-template-columns: 1fr 1fr
+    align-items: center
+
+    .col h1
+      font-size: 6.1rem
+      margin-bottom: 3rem
+      font-weight: 700
+
+    .col img
+      width: 100%
+
+@media (max-width: 1500px)
+  .header
+    margin: 2rem
+
+.header .icons
+  display: flex
+  align-items: center
+  margin-top: 10rem
+
+  .icon
+    display: inline-block
+    border-radius: 50%
+    border: 3px solid $yellow
+    height: 4rem
+    width: 4rem
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: $transition
+
+    &:not(:last-child)
+      margin-right: 1.5rem
+
+    &:hover
+      border-color: $blue-black
+
+  img
+    height: 2.7rem
+    padding: 0.2rem
+
+
+@media (min-width: 1500px)
+  .header .icons
+    margin-top: 1rem
+
+@media (max-width: 1200px)
+  .header .home .row .col h1
+    font-size: 5rem
+
+@media (max-width: 800px)
+  .header .home .row
+    grid-template-columns: 1fr
+    gap: 3rem 0
+    justify-content: center
+
+    .col:first-child
+      justify-self: center
+
+    .col:last-child
+      text-align: center
+
+    .col img
+      transform: translateX(-4%)
+      width: 48rem
+
+@media (max-width: 567px)
+  .header .home
+    margin-top: 5rem
+
+    .row .col img
+      width: 35rem
+
+    .row .col h1
+      font-size: 4rem
+
+  .header .icons
+    display: none

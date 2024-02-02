@@ -1,0 +1,43 @@
+.categories
+  padding-top: 0
+  margin-top: 0
+
+  h2
+    font-size: 5rem
+    text-align: center
+
+  .row
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    gap: 3rem
+    align-items: center
+    margin-top: 5rem
+
+    .col
+      text-align: center
+      padding: 3rem 2rem
+      border-radius: 2.5rem
+
+      img
+        width: 6rem
+        margin-bottom: 1.5rem
+
+      h4
+        font-size: 2.2rem
+        margin-bottom: 1.5rem
+
+      p
+        width: 80%
+        margin: 0 auto
+
+    .col:hover
+      box-shadow: $box-shadow
+      background-color: $white
+
+@media (max-width: 800px)
+  .categories h2
+    font-size: 4rem
+
+@media (max-width: 567px)
+  .categories h2
+    font-size: 3rem

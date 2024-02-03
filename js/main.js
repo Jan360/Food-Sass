@@ -1,4 +1,3 @@
-/* ========== Toogle Nav Menu ============ */
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 
@@ -10,7 +9,7 @@ window.addEventListener("scroll", () => {
   navbar.classList.remove("show");
 });
 
-/* ========== Testimonial Slider ============ */
+/* Testimonial Slider Swiper */
 const swiper = new Swiper(".myslider", {
   autoplay: {
     delay: 3500,
@@ -25,9 +24,9 @@ const swiper = new Swiper(".myslider", {
   },
 });
 
-/* =========== Scroll Top =========== */
+/* Scroll Top */
 const scrollTop = document.querySelector(".scroll-top");
-
+// Нажатие кнопки перематывать вверх страницы
 scrollTop.addEventListener("click", () => {
   window.scrollTo({
     left: 0,
@@ -35,10 +34,9 @@ scrollTop.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
+// Показать кнопку перемотки при прокрутке экрана на 300px
 window.addEventListener("scroll", (e) => {
   const scrollHeight = window.pageYOffset;
-
   if (scrollHeight > 300) {
     scrollTop.classList.add("show");
   } else {
@@ -46,16 +44,17 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
-/* ========== Scroll Reveal ============ */
+/* Scroll Reveal */
+// Смещение на 60px, продолжительность анимации, задержка перед анимацией, сбрасывать при прокрутке
 const scroll = ScrollReveal({
   distance: "60px",
-  duration: 2500,
-  delay: 400,
+  duration: 2000,
+  // delay: 400,
   reset: true,
 });
-
-scroll.reveal(`.home .col:last-child`, { delay: 600 });
-scroll.reveal(`.icons .icon, .about .col:first-child, .menu .col`, {
+// Направления появления элементов, интервал (задержка) между показом элементов как иконки
+// <img src="./images/food-one.png" alt="" />
+scroll.reveal(`.home .col:last-child, .icons .icon, .about .col:first-child, .menu .col`, {
   origin: "bottom",
   interval: 100,
 });
@@ -65,7 +64,7 @@ scroll.reveal(
   {
     origin: "left",
     interval: 150,
-    delay: 600,
+    // delay: 600,
   }
 );
 
@@ -76,11 +75,11 @@ scroll.reveal(
     interval: 100,
   }
 );
-
+// Categories
 scroll.reveal(`.categories .col:nth-child(2), .menu .btn`, {
   origin: "top",
 });
-
+// Testimonial
 scroll.reveal(`.testimonial .col:first-child`, {
   origin: "left",
 });
@@ -88,7 +87,7 @@ scroll.reveal(`.testimonial .col:first-child`, {
 scroll.reveal(`.testimonial .col:last-child`, {
   origin: "right",
 });
-
+// Footer
 scroll.reveal(`.footer .col div`, {
   origin: "top",
   interval: 100,

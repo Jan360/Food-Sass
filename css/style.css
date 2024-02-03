@@ -80,7 +80,7 @@ section {
   bottom: 1%;
   left: 0;
   margin-left: 1rem;
-  background-color: #212542;
+  background-color: #ffda7b;
   width: 50%;
   height: 3px;
   visibility: hidden;
@@ -379,6 +379,7 @@ section {
 .testimonial .row .col img {
   width: 100%;
   height: 100%;
+  max-width: 450px;
 }
 .testimonial .row h2 {
   font-size: 5rem;
@@ -550,8 +551,8 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #129bf6;
-  opacity: 0.2;
+  background-color: #fff;
+  opacity: 0.5;
   z-index: 0;
 }
 .contact .row .col {
@@ -702,15 +703,4 @@ section {
 }
 .scroll-top.show {
   display: block;
-}
-
-/* ========== Reset Code ============ */
-/* ========== Header ============ */
-/* ========== Hero Area ============ */
-/* ========== About ============ */
-/* ========== Categories ============ */
-/* ========== Testimonial ============ */
-/* ========== Menu ============ */
-/* ========== Contact ============ */
-/* ========== Footer ============ */
-/* Scroll Top *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
